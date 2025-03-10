@@ -33,26 +33,26 @@ const staggerContainer = {
 
 const CustomerJourney = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+    <div className="min-h-screen dark bg-[url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=1200&q=80')] bg-cover bg-fixed bg-center text-slate-100 before:content-[''] before:absolute before:inset-0 before:bg-slate-900 before:bg-opacity-90 before:backdrop-blur-sm relative">
       {/* Hero Section */}
       <motion.section
-        className="relative py-20 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto text-center"
+        className="relative py-20 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto text-center z-10"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-700">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
           Parcours Client : L'Expérience d'Antoine
         </h1>
-        <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-slate-600">
+        <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-slate-300 font-light">
           Découvrez comment l'Agence Digitale Jussieu a transformé l'activité
           d'un ébéniste indépendant grâce à une stratégie digitale sur mesure.
         </p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full shadow-lg"
+            className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-6 text-lg rounded-full shadow-xl backdrop-blur-sm"
           >
             Je veux mon site web maintenant ! <ArrowRight className="ml-2" />
           </Button>
@@ -60,7 +60,7 @@ const CustomerJourney = () => {
       </motion.section>
 
       {/* Journey Steps */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pb-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pb-20 relative z-10">
         {/* Step 1 */}
         <JourneyStep
           number="1"
@@ -117,14 +117,14 @@ const CustomerJourney = () => {
                 projet démarre immédiatement.
               </p>
             </div>
-            <div className="flex-1 bg-blue-50 p-6 rounded-lg shadow-md">
-              <h4 className="font-semibold text-lg mb-3 text-blue-700">
+            <div className="flex-1 backdrop-blur-md bg-blue-900/40 p-6 rounded-xl shadow-xl border border-blue-400/30">
+              <h4 className="font-semibold text-lg mb-3 text-blue-300">
                 Offre Découverte
               </h4>
               <div className="text-3xl font-bold mb-2">
                 99€<span className="text-sm font-normal">/mois</span>
               </div>
-              <p className="text-sm text-slate-600 mb-4">Sans engagement</p>
+              <p className="text-sm text-slate-400 mb-4">Sans engagement</p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
@@ -155,7 +155,7 @@ const CustomerJourney = () => {
         >
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-semibold text-lg mb-4 text-green-700">
+              <h4 className="font-semibold text-lg mb-4 text-green-300">
                 Phase de conception :
               </h4>
               <ul className="space-y-3 mb-6">
@@ -165,7 +165,7 @@ const CustomerJourney = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-lg mb-4 text-green-700">
+              <h4 className="font-semibold text-lg mb-4 text-green-300">
                 Mise en ligne officielle de son site :
               </h4>
               <ul className="space-y-3 mb-6">
@@ -179,8 +179,8 @@ const CustomerJourney = () => {
             Antoine a désormais un site fonctionnel et optimisé pour attirer des
             clients.
           </p>
-          <div className="mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="bg-slate-800 p-2 flex items-center space-x-2">
+          <div className="mt-8 backdrop-blur-md bg-green-900/40 rounded-xl shadow-xl overflow-hidden border border-green-400/30">
+            <div className="bg-green-950/70 backdrop-blur-md p-2 flex items-center space-x-2 border-b border-green-400/20">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
@@ -188,8 +188,8 @@ const CustomerJourney = () => {
                 www.antoine-ebeniste.fr
               </div>
             </div>
-            <div className="p-4 h-40 flex items-center justify-center border-t border-slate-200">
-              <p className="text-center text-slate-500">
+            <div className="p-4 h-40 flex items-center justify-center">
+              <p className="text-center text-slate-300">
                 Aperçu du site d'Antoine avec ses créations et services
               </p>
             </div>
@@ -208,37 +208,37 @@ const CustomerJourney = () => {
             attirer du trafic.
           </p>
 
-          <h4 className="font-semibold text-lg mb-4 text-purple-700">
+          <h4 className="font-semibold text-lg mb-4 text-purple-300">
             L'Agence Digitale Jussieu met en place :
           </h4>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="mb-4 bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center">
-                <Users className="w-8 h-8 text-purple-600" />
+            <div className="backdrop-blur-md bg-purple-900/40 p-6 rounded-xl shadow-xl border border-purple-400/30">
+              <div className="mb-4 bg-gradient-to-br from-purple-800/80 to-purple-900/60 w-14 h-14 rounded-full flex items-center justify-center border border-purple-400/30">
+                <Users className="w-8 h-8 text-purple-300" />
               </div>
               <h5 className="font-semibold mb-2">Publicités ciblées</h5>
-              <p className="text-sm text-slate-600">
+              <p className="text-sm text-slate-300">
                 Facebook & Instagram → Antoine voit son trafic doubler.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="mb-4 bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center">
-                <Globe className="w-8 h-8 text-purple-600" />
+            <div className="backdrop-blur-md bg-purple-900/40 p-6 rounded-xl shadow-xl border border-purple-400/30">
+              <div className="mb-4 bg-gradient-to-br from-purple-800/80 to-purple-900/60 w-14 h-14 rounded-full flex items-center justify-center border border-purple-400/30">
+                <Globe className="w-8 h-8 text-purple-300" />
               </div>
               <h5 className="font-semibold mb-2">Google My Business</h5>
-              <p className="text-sm text-slate-600">
+              <p className="text-sm text-slate-300">
                 Son atelier apparaît dans les recherches locales.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="mb-4 bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center">
-                <MessageSquare className="w-8 h-8 text-purple-600" />
+            <div className="backdrop-blur-md bg-purple-900/40 p-6 rounded-xl shadow-xl border border-purple-400/30">
+              <div className="mb-4 bg-gradient-to-br from-purple-800/80 to-purple-900/60 w-14 h-14 rounded-full flex items-center justify-center border border-purple-400/30">
+                <MessageSquare className="w-8 h-8 text-purple-300" />
               </div>
               <h5 className="font-semibold mb-2">Animation des réseaux</h5>
-              <p className="text-sm text-slate-600">
+              <p className="text-sm text-slate-300">
                 Des posts réguliers mettent en avant son savoir-faire.
               </p>
             </div>
@@ -261,7 +261,7 @@ const CustomerJourney = () => {
             et plus de demandes.
           </p>
 
-          <h4 className="font-semibold text-lg mb-4 text-amber-700">
+          <h4 className="font-semibold text-lg mb-4 text-amber-300">
             L'agence lui propose des évolutions adaptées :
           </h4>
 
@@ -305,7 +305,7 @@ const CustomerJourney = () => {
 
           <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-1">
-              <h4 className="font-semibold text-lg mb-4 text-indigo-700">
+              <h4 className="font-semibold text-lg mb-4 text-indigo-300">
                 L'agence lui propose un plan premium :
               </h4>
               <ul className="space-y-3 mb-6">
@@ -315,9 +315,9 @@ const CustomerJourney = () => {
               </ul>
             </div>
 
-            <div className="flex-1 bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-lg shadow-md">
+            <div className="flex-1 backdrop-blur-md bg-indigo-900/40 p-6 rounded-xl shadow-xl border border-indigo-400/30">
               <div className="flex justify-between items-center mb-6">
-                <h4 className="font-semibold text-lg text-indigo-700">
+                <h4 className="font-semibold text-lg text-indigo-300">
                   Plan Premium
                 </h4>
                 <span className="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm">
@@ -327,7 +327,7 @@ const CustomerJourney = () => {
               <div className="text-3xl font-bold mb-2">
                 249€<span className="text-sm font-normal">/mois</span>
               </div>
-              <p className="text-sm text-slate-600 mb-6">Engagement 6 mois</p>
+              <p className="text-sm text-slate-400 mb-6">Engagement 6 mois</p>
 
               <div className="space-y-3 mb-6">
                 <div className="flex items-center">
@@ -373,33 +373,33 @@ const CustomerJourney = () => {
             d'autres artisans.
           </p>
 
-          <div className="bg-gradient-to-r from-pink-50 to-purple-50 p-8 rounded-xl shadow-lg border border-pink-100 mb-8">
-            <h4 className="font-bold text-xl mb-6 text-center text-pink-700">
+          <div className="backdrop-blur-md bg-gradient-to-r from-pink-900/60 to-purple-900/60 border border-pink-400/30 p-8 rounded-xl shadow-xl mb-8">
+            <h4 className="font-bold text-xl mb-6 text-center text-pink-300">
               Programme de parrainage
             </h4>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-4xl font-bold text-pink-500 mb-2">1</div>
+              <div className="backdrop-blur-md bg-pink-900/40 p-6 rounded-xl shadow-xl border border-pink-400/30">
+                <div className="text-4xl font-bold text-pink-400 mb-2">1</div>
                 <h5 className="font-semibold mb-2">Recommandez l'agence</h5>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-300">
                   Partagez votre expérience avec d'autres artisans ou
                   entrepreneurs.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-4xl font-bold text-pink-500 mb-2">2</div>
+              <div className="backdrop-blur-md bg-pink-900/40 p-6 rounded-xl shadow-xl border border-pink-400/30">
+                <div className="text-4xl font-bold text-pink-400 mb-2">2</div>
                 <h5 className="font-semibold mb-2">Ils deviennent clients</h5>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-300">
                   Vos contacts souscrivent à une offre de l'agence.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-4xl font-bold text-pink-500 mb-2">3</div>
+              <div className="backdrop-blur-md bg-pink-900/40 p-6 rounded-xl shadow-xl border border-pink-400/30">
+                <div className="text-4xl font-bold text-pink-400 mb-2">3</div>
                 <h5 className="font-semibold mb-2">Vous gagnez</h5>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-300">
                   Recevez le montant du premier mois d'abonnement en commission.
                 </p>
               </div>
@@ -425,8 +425,8 @@ const CustomerJourney = () => {
           color="teal"
         >
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="font-semibold text-lg mb-4 text-teal-700">
+            <div className="backdrop-blur-md bg-teal-900/40 p-6 rounded-xl shadow-xl border border-teal-400/30">
+              <h4 className="font-semibold text-lg mb-4 text-teal-300">
                 Résultats obtenus
               </h4>
               <ul className="space-y-3">
@@ -438,9 +438,9 @@ const CustomerJourney = () => {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg shadow-md flex flex-col justify-center">
+            <div className="backdrop-blur-md bg-teal-900/40 p-6 rounded-xl shadow-xl border border-teal-400/30 flex flex-col justify-center">
               <div className="text-center mb-6">
-                <div className="text-5xl font-bold text-teal-600 mb-2">
+                <div className="text-5xl font-bold text-teal-300 mb-2">
                   +127%
                 </div>
                 <p className="text-lg">d'augmentation du chiffre d'affaires</p>
@@ -448,28 +448,28 @@ const CustomerJourney = () => {
 
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-teal-600 mb-1">
+                  <div className="text-3xl font-bold text-teal-300 mb-1">
                     +85%
                   </div>
                   <p className="text-sm">de nouveaux clients</p>
                 </div>
 
                 <div>
-                  <div className="text-3xl font-bold text-teal-600 mb-1">
+                  <div className="text-3xl font-bold text-teal-300 mb-1">
                     -40%
                   </div>
                   <p className="text-sm">de temps administratif</p>
                 </div>
 
                 <div>
-                  <div className="text-3xl font-bold text-teal-600 mb-1">
+                  <div className="text-3xl font-bold text-teal-300 mb-1">
                     24/7
                   </div>
                   <p className="text-sm">disponibilité en ligne</p>
                 </div>
 
                 <div>
-                  <div className="text-3xl font-bold text-teal-600 mb-1">
+                  <div className="text-3xl font-bold text-teal-300 mb-1">
                     +15
                   </div>
                   <p className="text-sm">artisans parrainés</p>
@@ -487,20 +487,23 @@ const CustomerJourney = () => {
 
       {/* CTA Section */}
       <motion.section
-        className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center"
+        className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-r from-blue-600/90 to-indigo-700/90 backdrop-blur-md text-white text-center relative z-10 border-t border-blue-400/20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={staggerContainer}
       >
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-6"
+          className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100"
           variants={fadeIn}
         >
           Transforme Ton Activité Dès Aujourd'hui !
         </motion.h2>
 
-        <motion.p className="text-xl max-w-3xl mx-auto mb-10" variants={fadeIn}>
+        <motion.p
+          className="text-xl max-w-3xl mx-auto mb-10 font-light"
+          variants={fadeIn}
+        >
           Comme Antoine, booste ton activité dès aujourd'hui ! Contacte l'Agence
           Digitale Jussieu et lance ton projet en 48h.
         </motion.p>
@@ -512,7 +515,7 @@ const CustomerJourney = () => {
         >
           <Button
             size="lg"
-            className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg rounded-full shadow-lg"
+            className="bg-white/90 backdrop-blur-sm text-blue-700 hover:bg-white px-8 py-6 text-lg rounded-full shadow-xl"
           >
             Je veux mon site web maintenant ! <ArrowRight className="ml-2" />
           </Button>
@@ -530,12 +533,15 @@ const JourneyStep = ({
   color,
   highlight = false,
 }) => {
-  const bgColor = highlight ? `bg-${color}-50` : "bg-white";
-  const borderColor = highlight ? `border-${color}-200` : "border-slate-100";
+  // Style uniforme avec effet glassmorphism
+  const glassEffect =
+    "backdrop-blur-md bg-opacity-20 border border-opacity-30 shadow-xl";
+  const bgGradient = `bg-gradient-to-br from-${color}-900/80 to-${color}-800/60`;
+  const borderColor = `border-${color}-400/50`;
 
   return (
     <motion.div
-      className={`mb-16 ${highlight ? "relative z-10" : ""}`}
+      className="mb-20 relative z-10"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
@@ -543,15 +549,17 @@ const JourneyStep = ({
     >
       <motion.div className="flex items-center mb-6" variants={fadeIn}>
         <div
-          className={`w-16 h-16 rounded-full bg-${color}-100 flex items-center justify-center mr-4 shadow-md`}
+          className={`w-16 h-16 rounded-full ${bgGradient} flex items-center justify-center mr-4 shadow-xl border ${borderColor} backdrop-blur-sm`}
         >
-          <span className="text-2xl font-bold text-slate-700">{number}</span>
+          <span className={`text-2xl font-bold text-white`}>{number}</span>
         </div>
-        <h3 className="text-2xl md:text-3xl font-bold">{title}</h3>
+        <h3 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">
+          {title}
+        </h3>
       </motion.div>
 
       <motion.div
-        className={`p-8 rounded-xl shadow-lg ${bgColor} border ${borderColor} ${highlight ? "transform md:-rotate-1" : ""}`}
+        className={`p-8 rounded-2xl ${glassEffect} ${bgGradient} ${borderColor} ${highlight ? "transform md:-rotate-1 ring-2 ring-${color}-400/50 ring-opacity-50" : ""}`}
         variants={fadeIn}
       >
         <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -564,33 +572,33 @@ const JourneyStep = ({
 };
 
 const ProblemItem = ({ text }) => (
-  <li className="flex items-start">
+  <li className="flex items-start backdrop-blur-sm bg-red-500/10 p-3 rounded-lg mb-2 border border-red-400/20">
     <span className="inline-block mr-2 mt-1">❌</span>
     <span>{text}</span>
   </li>
 );
 
 const BenefitItem = ({ text }) => (
-  <li className="flex items-start">
-    <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5" />
+  <li className="flex items-start backdrop-blur-sm bg-green-500/10 p-3 rounded-lg mb-2 border border-green-400/20">
+    <Check className="w-5 h-5 text-green-400 mr-2 mt-0.5" />
     <span>{text}</span>
   </li>
 );
 
 const ResultItem = ({ text }) => (
-  <li className="flex items-start">
-    <Check className="w-5 h-5 text-teal-500 mr-2 mt-0.5" />
+  <li className="flex items-start backdrop-blur-sm bg-teal-500/10 p-3 rounded-lg mb-2 border border-teal-400/20">
+    <Check className="w-5 h-5 text-teal-400 mr-2 mt-0.5" />
     <span>{text}</span>
   </li>
 );
 
 const FeatureCard = ({ icon, title, description }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md">
-    <div className="mb-4 bg-amber-100 w-14 h-14 rounded-full flex items-center justify-center">
-      <div className="text-amber-600">{icon}</div>
+  <div className="backdrop-blur-md bg-amber-900/40 p-6 rounded-xl shadow-xl border border-amber-400/30">
+    <div className="mb-4 bg-gradient-to-br from-amber-800/80 to-amber-900/60 w-14 h-14 rounded-full flex items-center justify-center border border-amber-400/30">
+      <div className="text-amber-300">{icon}</div>
     </div>
     <h5 className="font-semibold mb-2">{title}</h5>
-    <p className="text-sm text-slate-600">{description}</p>
+    <p className="text-sm text-slate-300">{description}</p>
   </div>
 );
 
